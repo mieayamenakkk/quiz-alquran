@@ -133,7 +133,6 @@ body {
     to { transform: translate(-50%, -50%) rotate(380deg); }
 }
 
-/* Welcome Screen */
 .planet-icon {
     text-align: center;
     margin-bottom: 30px;
@@ -738,4 +737,5 @@ body {
   margin-top: 15px;
   text-align: center;
   color: #fff;
+
 }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Angkasa: Tajwid & Asbabun Nuzul</title>
+    <link rel="stylesheet" href="QuizStyle.css">
+</head>
+<body>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    
+    <div class="container">
+        <div id="welcomeScreen" class="screen active">
+            <div class="planet-icon">
+                <div class="planet">
+                    <div class="crater"></div>
+                    <div class="crater"></div>
+                    <div class="crater"></div>
+                    <div class="ring"></div>
+                </div>
+            </div>
+            <h1 class="title">
+                <span class="subtitle">Petualangan Angkasa</span>
+                <span class="main-title">Tajwid & Asbabun Nuzul</span>
+            </h1>
+            <p class="description">Jelajahi galaksi ilmu Al-Quran dan kumpulkan bintang pengetahuan!</p>
+            
+            <div class="points-display welcome-points">
+                <div class="points-icon">⭐</div>
+                <div class="points-info">
+                    <span class="points-label">Total Poin Kamu</span>
+                    <span id="totalPoints" class="points-value">0</span>
+                </div>
+            </div>
+
+            <div class="exp-section">
+                <div class="points-info">
+                    <span class="points-label">Level Saat Ini</span>
+                    <span id="welcomeLevel" class="points-value">1</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="welcome-progress-fill"></div>
+                </div>
+                <p id="welcomeExpText">0 / 50 EXP</p>
+            </div>
+
+            <button onclick="startQuiz()" class="btn-primary">
+                <span>Mulai Petualangan</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div id="quizScreen" class="screen">
+            <div class="quiz-header">
+                <div class="points-display">
+                    <div class="points-icon">⭐</div>
+                    <span id="currentPoints" class="points-value">0</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bars" id="progressBars"></div>
+                    <span class="progress-text" id="progressText">1 dari 7</span>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-header">
+                    <div class="planet-small"></div>
+                    <h2 id="questionText" class="question-text"></h2>
+                </div>
+                <div id="optionsContainer" class="options-container"></div>
+            </div>
+        </div>
+
+        <div id="resultScreen" class="screen">
+            <div class="result-header">
+                <div class="galaxy-icon">
+                    <div class="spiral-galaxy">
+                        <div class="spiral-arm"></div>
+                        <div class="spiral-arm"></div>
+                        <div class="spiral-arm"></div>
+                        <div class="galaxy-core"></div>
+                    </div>
+                </div>
+                <h2 class="result-title">Misi Selesai!</h2>
+                <div class="score-display">
+                    <div class="score-planet">
+                        <div class="planet-score">
+                            <span id="scoreText" class="score-text">0/7</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="score-label">Pencapaian Kamu</p>
+
+                <div class="points-earned">
+                    <div class="points-badge">
+                        <span class="points-icon-large">⭐</span>
+                        <div class="points-details">
+                            <span class="points-earned-label">Poin yang Didapat</span>
+                            <span id="pointsEarned" class="points-earned-value">+0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-card">
+                <h3 class="results-header">
+                    <div class="satellite-icon"></div>
+                    Laporan Misi
+                </h3>
+                <div id="resultsContainer" class="results-container"></div>
+                
+                <div class="mission-complete">
+                    <div class="rocket-animation">
+                        <div class="rocket">🚀</div>
+                        <div class="exhaust"></div>
+                    </div>
+                    <p>Petualangan menakjubkan! Terus jelajahi ilmu Al-Quran untuk menemukan lebih banyak harta pengetahuan!</p>
+                </div>
+            </div>
+
+            <div class="exp-section">
+                <h3 class="results-header">Level & EXP</h3>
+                <p id="levelText">Level: 1</p>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <p id="expText">0 / 50 EXP</p>
+            </div>
+
+            <div class="result-actions">
+                <button onclick="restart()" class="btn-primary">
+                    <span>Jelajahi Lagi</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
